@@ -1,0 +1,696 @@
+/*start global roles*/
+* {
+    box-sizing: border-box;
+}
+/*end global roles*/
+
+/*start header*/
+.header {
+    background-image:url("../imgs/01.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    position: relative;
+    color:#fff;
+    padding:50px;
+    overflow: hidden;
+ }
+ @media (max-width:991px) {
+    .header {
+        text-align: center;
+    }
+ }
+ .header .overlay {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.4);
+}
+.header .box {
+    margin-top:100px
+}
+ .header .box h1 {
+     font-size:60px;
+     width:100%;
+     margin:0
+ }
+ .header .box h1 span {
+     color:coral;
+     font-weight: bold;
+ }
+ .header .box h1 ~ .lead {
+     line-height:1.5;
+     width:100%;
+     font-size:30px
+ }
+ @media (max-width:991px) {
+    .header .box h1 ~ .lead {
+        margin-top:20px;
+        font-size:20px
+    }
+ }
+ .header .box h1 ~ .lead::after {
+   content:'';
+   display:block;
+   background-color:#fff;
+   height:2px;
+   width:60px;
+   margin-top:20px
+}
+@media (max-width:991px) {
+
+    .header .box h1 ~ .lead::after {
+        margin:25px auto
+     }
+}
+ .header .box .lorem {
+     width:85%;
+     line-height:1.6;
+     font-size:15px;
+ }
+ @media (max-width:991px) {
+
+    .header .box .lorem {
+        margin:auto;
+        width:100%;
+        line-height:1.8
+    }
+ }
+ .header .box button {
+     float:left;
+     background:none;
+     border:1px solid #fff;
+     padding:6px 20px;
+     margin-top:15px
+ }
+ @media (max-width:991px) {
+
+    .header .box button {
+        display:block;
+        margin:30px auto;
+        float:none
+    }    
+}
+ .header form {
+     width:320px;
+     background:#fff;
+     border-radius:5px;
+     overflow: hidden;
+ }
+ .header form h2 {
+     background:#f5f5f5;
+     color:black;
+     padding:10px 0px;
+     font-size:22px;
+     font-weight:bold;
+     margin:0;
+     margin-bottom:30px;
+ }
+ .header form h2 span {
+     color:coral
+ }
+ .header form .form-control {
+     /* 
+     this class from bootstrap before you modify it 
+     look how it work by inspecr from the browser
+     and there is a lot od classes we used it bu i didnt make a comment beside it
+     */
+     margin:auto;
+     width:80%;
+     box-shadow:none;
+     border:none;
+     border-bottom:1px solid #eee;
+     margin-top:30px;
+ }
+ .header form input[type="submit"] {
+     margin-top:30px;
+     background:coral;
+     padding:10px;
+     border-top-left-radius: 0px;
+     border-top-right-radius:0px;
+     font-weight:bold;
+     font-size:16px
+ }
+ 
+/*end header*/
+/*start social media*/
+.social-media {
+    padding:5px;
+    box-shadow:-2px -5px 13px black;
+    overflow: hidden;
+}
+@media (max-width:991px) {
+
+    .social-media {
+        text-align: center;
+    }
+}
+.social-media h4 {
+    font-weight:bold;
+    font-size:24px;
+    margin-bottom:5px;
+}
+@media (max-width:991px) {
+
+    .social-media h4 {
+        margin-bottom:20px;
+    }
+}
+
+.social-media p {
+    color:#a1a1a1;
+    line-height:1.4;
+    margin-top:10px;
+}
+.social-media .icons {
+    display:flex;
+    justify-content: center;
+}
+.social-media i {
+    margin:15px 25px;
+    color:#ccc;
+    font-size:35px;
+    cursor: pointer;
+    transition:all 1s ease-in-out;
+}
+
+@media (max-width:991px) {
+
+    .social-media i {
+        margin:20px 10px
+    }
+}
+
+.social-media i:hover {
+    color:#333
+}
+/*end social media*/
+
+/*start tabs*/
+.tabs {
+    padding:50px 0;
+    background:#f5f5f5
+}
+@media (max-width:991px) {
+
+    .tabs {
+        text-align:center
+    }   
+}
+.tabs .tab-switch li {
+    background:#333;
+    color:#fff;
+    height:110px;
+    font-size:20px;
+    border-bottom:1px solid #fff;
+    width:68%;
+    line-height:110px;
+    cursor: pointer;
+}
+@media (max-width:991px) {
+
+    .tabs .tab-switch li {
+        width:100%
+    }   
+}
+.tabs .tab-switch li.selected,
+.tabs .tab-switch li:hover {
+    background:coral;
+    transition: all .5s ease-in-out;
+}
+.tabs .content div:not(.tab-one) {
+    display:none
+}
+.content div h3 {
+    margin-top:0;
+    font-weight:bold;
+    letter-spacing:-1px;
+    margin-bottom:20px;
+}
+@media (max-width:991px) {
+
+    .content div h3 {
+        margin-top:25px
+    }
+}
+.content div .lead {
+    line-height:1.6;
+    font-size:18px;
+    color:#7e7e7e;
+}
+@media (max-width:991px) {
+
+    .content div .lead {
+        line-height:1.8;
+        font-size:16px
+    }
+}
+.content div button {
+    background:coral;
+    color:#fff;
+    padding:8px 15px;
+    border-radius:3px;
+}
+@media (max-width:991px) {
+
+    .content div button {
+        padding:5px 10px;
+    }   
+}
+/*end tabs*/
+
+/*start sublist*/
+.sublist {
+    padding:80px 0
+}
+@media (max-width:991px) {
+    .sublist {
+        padding:0px;
+        text-align: center;
+    }
+}
+.sublist .right-box h3 {
+    font-weight:bold;
+    margin:0
+}
+@media (max-width:991px) {
+    .sublist .right-box h3 {
+        margin-top:30px;   
+    }
+}
+.sublist .right-box .desc {
+    line-height:1.6;
+    color:#777;
+    margin-bottom:30px
+}
+@media (max-width:991px) {
+    .sublist .right-box .desc {
+        line-height:1.8;
+    }
+}
+.sublist .right-box .topics {
+    margin-top:47px
+}
+@media (max-width:991px) {
+    .sublist .right-box .topics {
+           margin-top:20px
+    }
+}
+.sublist .right-box .topics i{
+    width:40px;
+    height:40px;
+    border:2px solid coral;
+    line-height:1.8;
+    text-align:center;
+    border-radius:50px;
+    color:coral;
+    float:left;
+    margin-right:10px;
+}
+@media (max-width:991px) {
+    .sublist .right-box .topics i {
+           float:none;
+           display:block;
+           margin:auto;
+    }
+}
+.sublist .right-box .topics .text-container {
+    float:left; /*osama didnt use this idea so its from me*/
+    width:90%;
+}
+@media (max-width:991px) {
+    .sublist .right-box .topics .text-container {
+           float: none;
+           width:100%;
+    }
+}
+.topics .text-container h4 {
+    margin:0;
+    margin-left:30px;
+    font-weight:bold;
+    font-size:16px
+}
+@media (max-width:991px) {
+    .sublist .text-container h4 {
+           margin:10px 0 0 0;
+           letter-spacing:1px;
+    }
+}
+.topics .text-container p {
+    margin-left:30px;
+    margin-top:10px;
+    line-height:1.6;
+    color:#777
+}
+@media (max-width:991px) {
+    .sublist .text-container p {
+           margin:0;
+           margin-top:10px;
+           line-height:1.8;
+           margin-bottom:20px        
+    }
+}
+@media (max-width:991px) {
+
+    .sublist img {
+        margin-top:40px;
+    }
+}
+/*end sublist*/
+
+/*start standard pic*/
+.standard-pic {
+    padding:80px 0;
+    background:#f5f5f5
+}
+@media (max-width:991px) {
+
+    .standard-pic {
+        padding:0;
+        text-align:center
+    }
+}
+.standard-pic .left-box h3 {
+    font-weight:bold;
+    margin-top:80px
+}
+.standard-pic .left-box .desc {
+    line-height:1.6;
+    color:#777;
+    margin-bottom:30px
+}
+.substandard-pic .left-box .topics {
+    margin-top:47px
+}
+.standard-pic .left-box .topics i{
+    width:40px;
+    height:40px;
+    border:2px solid coral;
+    line-height:1.8;
+    text-align:center;
+    border-radius:50px;
+    color:coral;
+    float:left;
+    margin-right:10px;
+}
+@media (max-width:991px) {
+
+    .standard-pic .left-box .topics i {
+        float:none;
+        display:block;
+        margin:auto;
+    }
+}
+.standard-pic .left-box .topics .text-container {
+    float:left; /*osama didnt use this idea so its from me*/
+    width:90%;
+}
+@media (max-width:991px) {
+
+    .standard-pic .left-box .topics .text-container {
+        float:none;
+        width:100%
+    }
+}
+.standard-pic .text-container h4 {
+    margin:0;
+    margin-left:30px;
+    font-weight:bold;
+    font-size:16px
+}
+@media (max-width:991px) {
+    .standard-pic .text-container h4 {
+        margin:10px 0 0 0;
+        letter-spacing:1px;
+    }
+}
+.standard-pic .text-container p {
+    margin-left:30px;
+    margin-top:10px;
+    line-height:1.6;
+    color:#777
+}
+
+/*end standard pic*/
+
+/*start awesome*/
+.awesome {
+    padding:80px 0;
+}
+@media (max-width:991px) {
+    .awesome {
+        padding-top:30px;
+    }
+}
+.awesome i {
+    width:70px;
+    height:70px;
+    line-height:68px; /* fisrt time i see this with px*/
+    border:2px solid coral;
+    border-radius:50px;
+    color:coral;
+}
+.awesome h2 {
+    font-weight:lighter;
+    font-size:40px
+}
+@media (max-width:991px) {
+    .awesome h2 {
+        margin-top:50px;
+    }
+}
+.awesome p {
+    margin-bottom:50px;
+    color:#a9aaac;
+}
+.awesome h3 {
+    font-weight:bold;
+    margin-top:20px;
+    margin-bottom:20px
+}
+@media (max-width:991px) {
+    .awesome h3 {
+        text-transform:capitalize
+    }
+}
+.awesome .description {
+    color:#a9aaac;
+    line-height:20px;
+    text-transform: capitalize;
+}
+/*end awesome*/
+
+/*start pricing*/
+.pricing {
+    padding:80px 0;
+    background:#f5f5f5
+}
+@media (max-width:991px) {
+    .pricing {
+        padding:20px 0;
+    }
+}
+.pricing .price-desc {
+    color:#a9aaac
+}
+.pricing .box {
+    background-color:#fff
+}
+.pricing .interprise,
+.pricing .basics {
+    margin-top:35px
+}
+@media (max-width:991px) {
+    .pricing .interprise,
+    .pricing .basics {
+        margin:0
+    }
+}
+/*nessesry to be here*/
+@media (max-width:991px) {
+    .pricing .box {
+        margin-top:50px
+    }
+}
+.pricing .box h3 {
+    padding:15px 0;
+    background:#333;
+    color:#fff;
+    margin:0;
+    font-weight:bold;
+    border-bottom:1px solid #fff
+}
+.pricing .box .price-box {
+    background:#333;
+    padding:10px 0 20px;
+    border-bottom:5px solid coral
+}
+.box .price-box .price {
+    font-size:70px;
+    color:#fff;
+    display:block;
+    font-weight:bold
+}
+.box .price-box .price .usd {
+    font-size:30px
+}
+.box .price-box .period {
+    color:#adadad;
+    font-weight:bold;
+    font-style:italic
+}
+.box .features li {
+    padding:10px;
+    border-bottom:1px solid #f5f5f5;
+    color:#8c8c8c;
+    text-transform: uppercase;
+
+}
+.box .most-pop {
+    padding:5px 10px 10px 10px;
+    background:coral;
+    margin-bottom:0;
+    color:#fff;
+    font-weight:bold
+}
+/*end pricing*/
+
+/*start testmonials*/
+.testmonials {
+    padding:80px 0;
+}
+.testmonials .test-desc {
+    margin-bottom:40px
+}
+.testmonials .client-comment {
+    background:#f5f5f5;
+    color:#8e8f93;
+    padding:20px;
+    position: relative;
+    margin-bottom:20px
+}
+.testmonials .client-comment::after {
+
+    content:'';
+    display:block;
+    width:0;
+    height:0;
+    border-style:solid;
+    border-width:15px;
+    border-color:#f5f5f5 transparent transparent;
+    position: absolute;
+    bottom:-28px;
+    left:26px
+}
+.testmonials .media-heading {
+    margin-top:20px;
+    font-weight:bold;
+    text-transform: capitalize;
+}
+.testmonials .media-body p {
+    text-transform: capitalize;
+    color:#a9aaac
+}
+/*end testmonials*/
+
+/*start stylish*/
+.stylish {
+    background-image:url("../imgs/02.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    position: relative;
+    color:#fff;
+    min-height:320px
+}
+.stylish .overlay {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, .6);
+    padding:60px 0;
+}
+.stylish p {
+    color:#a9aaac;
+}
+.stylish button {
+    margin:30px auto;
+    display:block;
+    padding:8px 20px;
+    border:2px solid #fff;
+    background:transparent;
+}
+.stylish .border-center::after {
+    background:#fff
+}
+/*end stylish*/
+
+/*start contact us*/
+.contact-us {
+    padding:80px 0;
+}
+.contact-us p {
+    color:#a9aaac;
+    margin-bottom:40px
+}
+.contact-us form input[type="text"],
+.contact-us form input[type="email"] {
+    margin-bottom:10px
+}
+.contact-us form textarea {
+    height:157px
+}
+
+.contact-us button {
+    margin:30px auto;
+    display:block;
+    padding:8px 20px;
+    border:2px solid coral;
+    background-color:coral;
+    color:#fff;
+    font-size:16px;
+    font-weight:bold;
+    border-radius:5px
+}
+/*end contact us*/
+
+/*start footer*/
+.footer {
+    padding:20px;
+    background:#000;
+    color:#eee;
+    font-size:18px
+}
+/*end footer*/
+/*my framework*/
+.uppercase {
+    text-transform: uppercase;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.border::after {
+    content:'';
+    height:3px;
+    width:65px;
+    display:block;
+    background:coral;
+    margin:20px 0;
+}
+.border-center::after {
+    content:'';
+    height:3px;
+    width:65px;
+    display:block;
+    background:coral;
+    margin:20px auto;
+}
+
+@media(max-width:991px) {
+
+    .border::after {margin:20px auto};
+}
